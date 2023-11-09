@@ -7,6 +7,7 @@
 #berechne den prozentuellen Anteil einer Kombination
 #richtiger Anteil recherchieren und mit ergebnis vergleichen
 import random as r
+import matplotlib.pyplot as plt
 
 def is_pair(listOfCards):
     values = [card % 13 for card in listOfCards] 
@@ -127,7 +128,7 @@ combinations_count = {
     "High Card": 0,
 }
 
-total_simulations = 10000
+total_simulations = 1000000
 for _ in range(total_simulations):
     listOfCards = []
 
@@ -150,3 +151,13 @@ for combination, percentage in combinations_percentage.items():
     print(f"{combination}: {percentage:.2f}%")
 
 print(combinations_count)
+
+labels = combinations_percentage.keys()
+sizes = combinations_count.values()
+
+fig, ax = plt.subplots()
+ax.pie(sizes, labels=labels, autopct='%1.1f%%', startangle=90)
+ax.axis('equal')
+
+plt.title("Pokerhand-Ergebnisse")
+plt.show()
