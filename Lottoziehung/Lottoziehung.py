@@ -50,6 +50,7 @@ for n in range(tries):
 
 # Erstellt ein Histogramm der gezogenen Zahlen
 
+print(dic)
 plt.bar(dic.keys(), dic.values())
 plt.title("Häufigkeit der Lottozahlen, n=" + str(tries))
 plt.xlabel("Zahlen")
