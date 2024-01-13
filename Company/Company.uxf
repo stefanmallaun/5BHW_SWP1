@@ -1,4 +1,4 @@
-<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>420</x><y>20</y><w>300</w><h>220</h></coordinates><panel_attributes>Firma
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>290</x><y>0</y><w>300</w><h>220</h></coordinates><panel_attributes>Firma
 --
 - departments: List&lt;Abteilung&gt;
 - members: List&lt;Person&gt;
@@ -13,30 +13,30 @@
 - department_largest_member_count(): String, int
 - percent_distribution_gender(): String, int
 
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>210</x><y>290</y><w>210</w><h>60</h></coordinates><panel_attributes>Person
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>80</x><y>270</y><w>210</w><h>60</h></coordinates><panel_attributes>Person
 --
 - name: String
 - gender: String
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>210</x><y>390</y><w>210</w><h>50</h></coordinates><panel_attributes>Mitarbeiter
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>80</x><y>370</y><w>210</w><h>50</h></coordinates><panel_attributes>Mitarbeiter
 --
 - department: Abteilung
 
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>210</x><y>480</y><w>210</w><h>50</h></coordinates><panel_attributes>Abteilungsleiter
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>80</x><y>460</y><w>210</w><h>50</h></coordinates><panel_attributes>Abteilungsleiter
 --
 - is_Admin: Boolean
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>610</x><y>390</y><w>210</w><h>80</h></coordinates><panel_attributes>Abteilung
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>480</x><y>370</y><w>210</w><h>80</h></coordinates><panel_attributes>Abteilung
 --
 - name: String
 - members: List&lt;Mitarbeiter&gt;
 - leader: Abteilungsleiter
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>520</x><y>230</y><w>210</w><h>180</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>390</x><y>210</y><w>210</w><h>180</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
 m1= 1
-m2= n</panel_attributes><additional_attributes>10;10;190;160</additional_attributes></element><element><id>Relation</id><coordinates><x>310</x><y>230</y><w>210</w><h>80</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m2= n</panel_attributes><additional_attributes>10;10;190;160</additional_attributes></element><element><id>Relation</id><coordinates><x>180</x><y>210</y><w>210</w><h>80</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
 m1= 1
-m2= n</panel_attributes><additional_attributes>190;10;10;60</additional_attributes></element><element><id>Relation</id><coordinates><x>300</x><y>340</y><w>30</w><h>70</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;50</additional_attributes></element><element><id>Relation</id><coordinates><x>300</x><y>430</y><w>30</w><h>70</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;50</additional_attributes></element><element><id>Relation</id><coordinates><x>410</x><y>390</y><w>220</w><h>60</h></coordinates><panel_attributes>lt=-
+m2= n</panel_attributes><additional_attributes>190;10;10;60</additional_attributes></element><element><id>Relation</id><coordinates><x>170</x><y>320</y><w>30</w><h>70</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;50</additional_attributes></element><element><id>Relation</id><coordinates><x>170</x><y>410</y><w>30</w><h>70</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;50</additional_attributes></element><element><id>Relation</id><coordinates><x>280</x><y>370</y><w>220</w><h>60</h></coordinates><panel_attributes>lt=-
 m1=n
 m2=1
-</panel_attributes><additional_attributes>10;20;200;30</additional_attributes></element><element><id>Relation</id><coordinates><x>410</x><y>440</y><w>220</w><h>90</h></coordinates><panel_attributes>lt=-
+</panel_attributes><additional_attributes>10;20;200;30</additional_attributes></element><element><id>Relation</id><coordinates><x>280</x><y>420</y><w>220</w><h>90</h></coordinates><panel_attributes>lt=-
 m1=1
 m2=1
 </panel_attributes><additional_attributes>10;70;200;10</additional_attributes></element></diagram>
