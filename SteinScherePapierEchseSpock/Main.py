@@ -123,8 +123,7 @@ def main():
     save_statistics(stats, stats_filename)
     print(f"\nGame Summary: Cpu wins: {cpu_win_count}, Player wins: {player_win_count}, Draws: {draw}")
 
-if __name__ == "__main__":
-    main()
+
     """
     TEST:
     game("rock")

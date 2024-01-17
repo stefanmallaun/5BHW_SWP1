@@ -1,5 +1,5 @@
-rock: 1
+rock: 2
 spock: 2
-paper: 2
+paper: 3
 lizard: 1
-scissors: 1
+scissors: 2
