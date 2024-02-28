@@ -35,6 +35,7 @@ Logik:
 from flask import Flask, request
 import threading
 import random 
+import requests
 
 app = Flask(__name__)
 
@@ -57,7 +58,9 @@ def load_statistics(filename):
                     stats[choice] = int(count)
     except FileNotFoundError:
         print(f"No existing statistics file found. A new one will be created: {filename}")
+        return stats
     return stats
+
 
 
 def update_statistics(choice, stats):
@@ -91,7 +94,7 @@ def game(player_choice, cpu_win_count, player_win_count, draw, stats):
     return cpu_win_count, player_win_count, draw
 
 def main():
-    stats_filename = 'SteinScherePapierEchseSpock/game_statistic.txt'
+    stats_filename = 'game_statistic.txt'
     stats = load_statistics(stats_filename)
     cpu_win_count, player_win_count, draw = 0, 0, 0
 
@@ -120,11 +123,14 @@ def main():
             for choice, count in stats.items():
                 print(f"{choice}: {count}")
         elif choice == '3':
+            url = 'http://127.0.0.1:1234/postStats'
+            query = stats
+            requests.post(url, data=query)
             break
         else:
             print("Invalid choice. Please select 1, 2, or 3.")
 
-    save_statistics(stats, stats_filename)
+    #save_statistics(stats, stats_filename)
     print(f"\nGame Summary: Cpu wins: {cpu_win_count}, Player wins: {player_win_count}, Draws: {draw}")
 
 
@@ -136,36 +142,7 @@ def main():
     game("lizard")
     game("scissors")
     """
-def determine_winner(player_choice, cpu_choice):
-    choices = ['rock', 'spock', 'paper', 'lizard', 'scissors']
-    player_number = choices.index(player_choice)
-    cpu_number = choices.index(cpu_choice)
-    difference = (player_number - cpu_number) % 5
-    if difference == 1 or difference == 2:
-        return 'CPU'
-    elif difference == 3 or difference == 4:
-        return 'Player'
-    else:
-        return 'Draw'
-
-# Endpunkt zum Senden von Daten
-@app.route('/send_data', methods=['POST'])
-def send_data():
-    player_choice = request.form.get('player_choice')
-    cpu_choice = request.form.get('cpu_choice')
-    winner = determine_winner(player_choice, cpu_choice)
-    
-    # Ihre vorhandene Logik zur Aktualisierung von Statistiken hier
-
-    return "Data received and saved successfully."
-
-# Endpunkt zum Empfangen von Daten
-@app.route('/get_statistics', methods=['GET'])
-def get_statistics():
-    # Ihre vorhandene Logik zur Anzeige von Statistiken hier
-    return "Statistics"
-
 
 
 if __name__ == "__main__":
-    app.run(debug= True, host='localhost', port=1234)
+    main()
