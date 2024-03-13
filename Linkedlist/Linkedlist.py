@@ -9,7 +9,7 @@ import random
     - programmiere Ausgabe Länge der Datenstruktur
     - Ausgabe aller Elemente
     - main mit exemplarischen (Zufallszahlen) Befüllen
-    - iterator protokoll imlementieren
+    - iterator protokoll implementieren
 """
 
 
