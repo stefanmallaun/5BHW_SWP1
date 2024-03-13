@@ -126,6 +126,7 @@ def main():
             url = 'http://127.0.0.1:1234/postStats'
             query = stats
             requests.post(url, data=query)
+            print(requests.post(url, data=query))
             break
         else:
             print("Invalid choice. Please select 1, 2, or 3.")

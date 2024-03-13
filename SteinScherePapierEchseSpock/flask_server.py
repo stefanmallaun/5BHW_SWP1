@@ -24,7 +24,7 @@ def post():
         if key in db_dict.keys():
             sql = f"UPDATE player_choice SET amount = {int(db_dict[key]) + int(data[key])} WHERE name = '{key}'"
             cursor.execute(sql)
-            
+            print(sql)
         else:
             sql = f"INSERT INTO player_choice (name, amount) VALUES('{key}', {data[key]})"
             cursor.execute(sql)

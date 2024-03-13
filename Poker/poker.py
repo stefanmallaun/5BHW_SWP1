@@ -8,7 +8,18 @@
 #richtiger Anteil recherchieren und mit ergebnis vergleichen
 import random as r
 import matplotlib.pyplot as plt
+import time
 
+def time_it(func):
+    def wrapper(*args, **kwargs):
+        start_time = time.time()
+        result = func(*args, **kwargs)
+        end_time = time.time()
+        print(f"Die Funktion '{func.__name__}' wurde in {end_time - start_time:.4f} Sekunden ausgeführt.")
+        return result
+    return wrapper
+
+@time_it
 def main():
 
     def is_pair(listOfCards):
