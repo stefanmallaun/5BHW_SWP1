@@ -22,6 +22,8 @@ programmiere in Python:
  - wie ist der Prozentanteil Frauen Männer
 
 Maximiere die Logik-Kapselung...Methoden und Datenstrukturen sollten in den passenden Klassen implementiert werden.
+Test
+
 """
 
 class Person:
